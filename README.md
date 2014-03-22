@@ -53,6 +53,12 @@ pin(17).value(0)
 pin.direction(:in).value
 ```
 
+To free pins so that other modules may use them  :
+
+```ruby
+Taopaipai.gpio.release
+```
+
 ## Other useful projects
 
 Taopaipai was meant to be the simplest approach to control GPIO using ruby code, without the need
