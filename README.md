@@ -30,7 +30,7 @@ pin = Taopaipai.gpio.pin(17, direction: :out, value: 0)
 pin.value(1)
 
 # Read from the pin 27
-Taopaipai.gpio.pin(17).read
+Taopaipai.gpio.pin(27, direction: :in).value
 # => 0
 ```
 
