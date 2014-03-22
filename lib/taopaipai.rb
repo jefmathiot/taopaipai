@@ -1,5 +1,12 @@
 require "taopaipai/version"
+require "taopaipai/io"
+require "taopaipai/pin"
+require "taopaipai/gpio"
 
 module Taopaipai
-  # Your code goes here...
+  class << self
+    def gpio
+      @gpio ||= GPIO.new
+    end
+  end
 end
