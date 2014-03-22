@@ -3,6 +3,10 @@
 A dead-simple, dependency-less gem to control Raspberry GPIO pins using Linux User Space. No
 root-access is required as Taopaipai handles pins reservation using the filsystem.
 
+[![Build Status](https://travis-ci.org/servebox/taopaipai.png)](https://travis-ci.org/servebox/taopaipai)
+[![Coverage Status](https://coveralls.io/repos/servebox/taopaipai/badge.png)](https://coveralls.io/r/servebox/taopaipai)
+[![Code Climate](https://codeclimate.com/github/servebox/taopaipai.png)](https://codeclimate.com/github/servebox/taopaipai)
+
 ## Installation
 
 Add this line to your application's Gemfile:
