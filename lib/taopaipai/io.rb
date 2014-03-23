@@ -29,7 +29,7 @@ module Taopaipai
       begin
         File.open(relative(path), 'w'){|f| f.write(content) }
       rescue => e
-        if last_attempt
+        unless last_attempt
           write_to_file(path, content, true)
         else
           raise e
