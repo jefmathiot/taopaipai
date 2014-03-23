@@ -25,8 +25,16 @@ module Taopaipai
     end
 
     private
-    def write_to_file(path, content)
-      File.open(relative(path), 'w'){|f| f.write(content) }
+    def write_to_file(path, content, last_attempt = false)
+      begin
+        File.open(relative(path), 'w'){|f| f.write(content) }
+      rescue => e
+        if last_attempt
+          write_to_file(path, content, true)
+        else
+          raise e
+        end
+      end
     end
 
     def relative(path)
