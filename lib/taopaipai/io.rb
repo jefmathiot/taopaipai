@@ -34,7 +34,7 @@ module Taopaipai
         if attempts <= MAX_WRITE_ATTEMPTS
           # Wait 10 ms before retry
           sleep 0.01
-          write_to_file(path, content, attemps + 1)
+          write_to_file(path, content, attempts + 1)
         else
           raise e
         end
