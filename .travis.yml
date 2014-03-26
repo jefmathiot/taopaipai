@@ -1,5 +1,9 @@
 language: ruby
 rvm:
-  - "1.9.3"
-  - "2.0.0"
-  - jruby-19mode 
+- 1.9.3
+- 2.0.0
+- jruby-19mode
+notifications:
+  hipchat:
+    rooms:
+      secure: HlJBTQInLb7gdjSfNq+qklE9vh3bZQyh3+Pb0KFRqCK2rkpC2t20wW1Vm1ZaplqZnhIlenuZNg29wNb+fnIRu+d/U6Qhcc9X4O8K8Efn5YfGy1/CKhkIc1GuLqG2I/9ZSJ9C3YIESrbYV9/l/0qZFNWT0wwy+j/jTILUTyAVcTQ=
