@@ -1,6 +1,6 @@
 module Taopaipai
   class IO
-    MAX_WRITE_ATTEMPTS = 10
+    MAX_WRITE_ATTEMPTS = 220
 
     def initialize(base_path)
       @base_path = base_path
@@ -32,8 +32,8 @@ module Taopaipai
         File.open(relative(path), 'w'){|f| f.write(content) }
       rescue => e
         if attempts <= MAX_WRITE_ATTEMPTS
-          # Wait 10 ms before retry
-          sleep 0.01
+          # Wait 100 ms before retry
+          sleep 0.1
           write_to_file(path, content, attempts + 1)
         else
           raise e
